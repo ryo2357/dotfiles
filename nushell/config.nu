@@ -7,7 +7,8 @@
 # use ~/AppData/Roaming/nushell/aliases.nu my_aliases
 # alias ll = ls -l
 # nu ~/AppData/Roaming/nushell/aliases.nu
-use ~/AppData/Roaming/nushell/my_command.nu *
+use ~/dotfiles/nushell/custom_config_default.nu *
+use ~/dotfiles/nushell/custom_config_overlay.nu *
 
 
 

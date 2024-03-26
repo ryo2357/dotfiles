@@ -2,6 +2,5 @@
 "alacritty/alacritty.toml" = "C:\\Users\\user/AppData/Roaming/alacritty/alacritty.toml"
 "nushell/config.nu" = "C:\\Users\\user/AppData/Roaming/nushell/config.nu"
 "nushell/env.nu" = "C:\\Users\\user/AppData/Roaming/nushell/env.nu"
-"nushell/my_command.nu" = "C:\\Users\\user/AppData/Roaming/nushell/my_command.nu"
 
 [templates]

@@ -8,6 +8,5 @@ depends = []
 
 "nushell/config.nu" = { target = "~/AppData/Roaming/nushell/config.nu", type = "symbolic" }
 "nushell/env.nu" = { target = "~/AppData/Roaming/nushell/env.nu", type = "symbolic" }
-"nushell/my_command.nu" = { target = "~/AppData/Roaming/nushell/my_command.nu", type = "symbolic" }
 
 [default.variables]
