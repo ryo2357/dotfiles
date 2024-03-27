@@ -17,11 +17,16 @@ export def rcode [] {
 }
 
 
-export def wsl [] {
-  /Windows/System32/wsl.exe  -d Ubuntu-20.04 --cd \\wsl$\Ubuntu-20.04\home\wsl
+export def wdev [] {
+  wsl -d Ubuntu-20.04 --cd \\wsl$\Ubuntu-20.04\home\wsl\dev
 }
 
 export def wcode [] {
   # /Windows/System32/wsl.exe
-  /Windows/System32/wsl.exe  -d Ubuntu-20.04 --cd \\wsl$\Ubuntu-20.04\home\wsl -- code .
+  wsl -d Ubuntu-20.04 --cd \\wsl$\Ubuntu-20.04\home\wsl\dev -- code .
 }
+
+# export def wcode [] {
+#   # /Windows/System32/wsl.exe
+#   wsl -d Ubuntu-20.04 -- code .
+# }
