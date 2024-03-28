@@ -3,7 +3,7 @@ export def check_config_mode [] {
   $"default"
 }
 
-export def config [] {
+export def dotfiles [] {
   code ~/dotfiles/
 }
 

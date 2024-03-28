@@ -14,12 +14,13 @@ ryo2357's dotfiles.
   `winget install nushell`
 - alacritty
   `cargo install alacritty`
+- wezterm
+  `winget install wez.wezterm`
 
 ```shell
-git clone https://github.com/ryo2357/dotfiles.git ~/.dotfiles
+git clone https://github.com/ryo2357/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-sudo dotter deploy --force`
-
+sudo dotter deploy --force
 ```
 
 ##
