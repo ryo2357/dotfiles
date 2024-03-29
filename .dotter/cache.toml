@@ -1,7 +1,0 @@
-[symlinks]
-"alacritty/alacritty.toml" = "C:\\Users\\ryosu/AppData/Roaming/alacritty/alacritty.toml"
-"nushell/config.nu" = "C:\\Users\\ryosu/AppData/Roaming/nushell/config.nu"
-"nushell/env.nu" = "C:\\Users\\ryosu/AppData/Roaming/nushell/env.nu"
-"wezterm/wezterm.lua" = "C:\\Users\\ryosu/.config/wezterm/wezterm.lua"
-
-[templates]
