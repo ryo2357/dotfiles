@@ -3,8 +3,8 @@ export def check_config_mode [] {
   $"default"
 }
 
-export def dotfiles [] {
-  code ~/dotfiles/
+export def confd [] {
+  code ~/dotfiles/ --profile dotfiles
 }
 
 # overlayにて上書きするコマンド
@@ -30,3 +30,5 @@ export def wcode [] {
 #   # /Windows/System32/wsl.exe
 #   wsl -d Ubuntu-20.04 -- code .
 # }
+
+# export alias dev = cd $"E:/dev"
