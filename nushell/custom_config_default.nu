@@ -44,3 +44,5 @@ export def stopwsl [] {
 #   git reset --hard origin/main
 #   git clean -fdx
 # }
+
+# export alias curl = C:/tools/curl/curl-8.7.1_6-win64-mingw/bin/curl.exe
