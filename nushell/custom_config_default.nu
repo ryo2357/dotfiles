@@ -36,7 +36,9 @@ export def confsync [] {
   cd $env.dotfiles_path
   git add --all
   git commit -m $comment
-  git pull --rebase
+  # git pull --rebase
+  git fetch
+  git rebase -Xours origin/main
   git push origin main
 }
 
@@ -73,7 +75,9 @@ export def ob_setting_sync [] {
   cd $path
   git add --all
   git commit -m $comment
-  git pull --rebase
+  # git pull --rebase
+  git fetch
+  git rebase -Xours origin/main
   git push origin main
 }
 
