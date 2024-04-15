@@ -41,14 +41,12 @@ export def confsync [] {
 }
 
 export def confforcepull [] {
-  let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
-  let comment = "update " + $datetime
   cd $env.dotfiles_path
   git reset --hard HEAD
   git stash
   git pull origin main
   git reset --hard origin/main
-  git clean -fdx
+  git clean -fd
 }
 
 export alias cdconf = cd $env.dotfiles_path
@@ -65,7 +63,7 @@ export def ob_force_pull [] {
   git stash
   git pull origin main
   git reset --hard origin/main
-  git clean -fdx
+  git clean -fd
 }
 
 export def ob_setting_sync [] {
@@ -86,7 +84,7 @@ export def ob_setting_force_pull [] {
   git stash
   git pull origin main
   git reset --hard origin/main
-  git clean -fdx
+  git clean -fd
 }
 
 ######################################
