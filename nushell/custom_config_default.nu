@@ -59,6 +59,18 @@ export alias cdconf = cd $env.dotfiles_path
 
 export alias cdob = cd $env.obsidian_path
 
+export def ob_sync [] {
+  cd $env.obsidian_path
+  let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
+  let comment = "update " + $datetime
+  git add --all
+  git commit -m $comment
+  # git pull --rebase
+  git fetch
+  git rebase -Xours origin/main
+  git push origin main
+}
+
 export def ob_force_pull [] {
   cd $env.obsidian_path
   git reset --hard HEAD
