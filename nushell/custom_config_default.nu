@@ -30,26 +30,12 @@ export def confd [] {
   code . --profile dotfiles
 }
 
-export def confsync [] {
-  # let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
-  # let comment = "update " + $datetime
-  # cd $env.dotfiles_path
-  # git add --all
-  # git commit -m $comment
-  # # git pull --rebase
-  # git fetch
-  # git rebase -Xours origin/main
-  # git push origin main
-  git_sync[$env.dotfiles_path]
+export def conf_sync [] {
+  git_sync $env.dotfiles_path
 }
 
-export def confforcepull [] {
-  cd $env.dotfiles_path
-  git reset --hard HEAD
-  git stash
-  git pull origin main
-  git reset --hard origin/main
-  git clean -fd
+export def conf_fpull [] {
+  git_force_pull $env.dotfiles_path
 }
 
 export alias cdconf = cd $env.dotfiles_path
@@ -72,39 +58,21 @@ export alias cdob = cd $env.obsidian_path
 #   git push origin main
 # }
 export def ob_sync [] {
-  git_sync[$env.obsidian_path]
+  git_sync $env.obsidian_path
 }
 
-export def ob_force_pull [] {
-  cd $env.obsidian_path
-  git reset --hard HEAD
-  git stash
-  git pull origin main
-  git reset --hard origin/main
-  git clean -fd
+export def ob_fpull [] {
+  git_force_pull $env.obsidian_path
 }
 
 export def ob_setting_sync [] {
   let path = $env.obsidian_path + "/.obsidian"
-  let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
-  let comment = "update " + $datetime
-  cd $path
-  git add --all
-  git commit -m $comment
-  # git pull --rebase
-  git fetch
-  git rebase -Xours origin/main
-  git push origin main
+  git_sync $path
 }
 
-export def ob_setting_force_pull [] {
+export def ob_setting_fpull [] {
   let path = $env.obsidian_path + "/.obsidian"
-  cd $path
-  git reset --hard HEAD
-  git stash
-  git pull origin main
-  git reset --hard origin/main
-  git clean -fd
+  git_force_pull $path
 }
 
 ######################################
@@ -145,7 +113,7 @@ export def rcode [] {
 # 共通処理関係
 ######################################
 
-export def  git_sync [path:string] {
+def git_sync [path:string] {
   cd $path
   let status = (git status --porcelain)
   if $status != "" {
@@ -161,4 +129,13 @@ export def  git_sync [path:string] {
   git fetch
   git rebase -Xours origin/main
   git push origin main
+}
+
+def git_force_pull [path:string] {
+  cd $path
+  git reset --hard HEAD
+  git stash
+  git pull origin main
+  git reset --hard origin/main
+  git clean -fd
 }
