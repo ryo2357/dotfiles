@@ -31,15 +31,16 @@ export def confd [] {
 }
 
 export def confsync [] {
-  let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
-  let comment = "update " + $datetime
-  cd $env.dotfiles_path
-  git add --all
-  git commit -m $comment
-  # git pull --rebase
-  git fetch
-  git rebase -Xours origin/main
-  git push origin main
+  # let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
+  # let comment = "update " + $datetime
+  # cd $env.dotfiles_path
+  # git add --all
+  # git commit -m $comment
+  # # git pull --rebase
+  # git fetch
+  # git rebase -Xours origin/main
+  # git push origin main
+  git_sync[$env.dotfiles_path]
 }
 
 export def confforcepull [] {
