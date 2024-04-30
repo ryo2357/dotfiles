@@ -59,16 +59,19 @@ export alias cdconf = cd $env.dotfiles_path
 
 export alias cdob = cd $env.obsidian_path
 
+# export def ob_sync [] {
+#   cd $env.obsidian_path
+#   let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
+#   let comment = "update " + $datetime
+#   git add --all
+#   git commit -m $comment
+#   # git pull --rebase
+#   git fetch
+#   git rebase -Xours origin/main
+#   git push origin main
+# }
 export def ob_sync [] {
-  cd $env.obsidian_path
-  let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
-  let comment = "update " + $datetime
-  git add --all
-  git commit -m $comment
-  # git pull --rebase
-  git fetch
-  git rebase -Xours origin/main
-  git push origin main
+  git_sync[$env.obsidian_path]
 }
 
 export def ob_force_pull [] {
@@ -137,4 +140,24 @@ export def rcode [] {
   code $argument
 }
 
+######################################
+# 共通処理関係
+######################################
 
+export def  git_sync [path:string] {
+  cd $path
+  let status = (git status --porcelain)
+  if $status != "" {
+    echo "Changes detected. Committing changes..."
+    let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
+    let comment = "update " + $datetime
+    git add --all
+    git commit -m $comment
+  } else {
+    echo "No changes to commit. Running git fetch..."
+  }
+  # git pull --rebase
+  git fetch
+  git rebase -Xours origin/main
+  git push origin main
+}
