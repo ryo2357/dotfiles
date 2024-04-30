@@ -65,6 +65,10 @@ export def ob_fpull [] {
   git_force_pull $env.obsidian_path
 }
 
+export def ob_push [] {
+  git_push $env.obsidian_path
+}
+
 export def ob_setting_sync [] {
   let path = $env.obsidian_path + "/.obsidian"
   git_sync $path
@@ -138,4 +142,19 @@ def git_force_pull [path:string] {
   git pull origin main
   git reset --hard origin/main
   git clean -fd
+}
+
+def git_push [path:string] {
+  cd $path
+  let status = (git status --porcelain)
+  if $status != "" {
+    echo "Changes detected. Committing changes..."
+    let datetime = date now | format date "%Y-%m-%d %H:%M:%S"
+    let comment = "update " + $datetime
+    git add --all
+    git commit -m $comment
+    git push origin HEAD
+  } else {
+    echo "No changes to commit."
+  }
 }
