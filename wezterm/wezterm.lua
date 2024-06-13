@@ -27,6 +27,7 @@ config.skip_close_confirmation_for_processes_named = {
   'fish',
   'tmux',
   'nu',
+  'nu.exe',
   'cmd.exe',
   'pwsh.exe',
   'powershell.exe',
