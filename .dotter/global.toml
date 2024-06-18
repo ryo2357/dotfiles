@@ -12,4 +12,7 @@ depends = []
 "wezterm/wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "symbolic" }
 
 
+"starship/starship.toml" = { target = "~/.config/starship.toml", type = "symbolic" }
+
+
 [default.variables]

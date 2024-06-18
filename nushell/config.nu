@@ -7,11 +7,16 @@
 # use ~/AppData/Roaming/nushell/aliases.nu my_aliases
 # alias ll = ls -l
 # nu ~/AppData/Roaming/nushell/aliases.nu
+
+# 自作のカスタムコマンド
 use ~/dotfiles/nushell/custom_config_default.nu *
 use ~/dotfiles/nushell/dev_config.nu *
 
-
 use ~/dotfiles/nushell/custom_config_overlay.nu *
+
+# Starshipの初期化ソースへのリンク
+source ~/dotfiles/starship/init.nu
+
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html

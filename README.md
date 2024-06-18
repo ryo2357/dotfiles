@@ -16,6 +16,8 @@ ryo2357's dotfiles.
   `cargo install alacritty`
 - wezterm
   `winget install wez.wezterm`
+- starship
+  `winget install Starship.Starship`
 
 ```shell
 git clone https://github.com/ryo2357/dotfiles.git ~/dotfiles
@@ -23,4 +25,9 @@ cd ~/dotfiles
 sudo dotter deploy --force
 ```
 
-##
+## Usage
+
+```shell
+# Reflect the updates of dotter
+sudo dotter deploy
+```
