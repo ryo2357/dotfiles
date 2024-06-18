@@ -32,8 +32,10 @@ config.skip_close_confirmation_for_processes_named = {
   'pwsh.exe',
   'powershell.exe',
 }
-config.font =
-  wezterm.font('HackGen Console NF')
-config.font_size=14.0
+
+-- nardfontは使わない
+-- config.font =
+--   wezterm.font('HackGen Console NF')
+-- config.font_size=14.0
 
 return config
