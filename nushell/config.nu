@@ -12,7 +12,8 @@
 use ~/dotfiles/nushell/custom_config_default.nu *
 use ~/dotfiles/nushell/dev_config.nu *
 
-use ~/dotfiles/nushell/custom_config_overlay.nu *
+# use ~/dotfiles/nushell/custom_config_overlay.nu *
+use ~/dotfiles/nushell/overlay/mod.nu *
 
 # Starshipの初期化ソースへのリンク
 # source ~/dotfiles/starship/init.nu

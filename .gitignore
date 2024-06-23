@@ -1,2 +1,4 @@
 /nushell/custom_config_overlay.nu
 /.dotter/cache.toml
+
+/nushell/overlay
