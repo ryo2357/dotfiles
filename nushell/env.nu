@@ -99,3 +99,9 @@ $env.NU_PLUGIN_DIRS = [
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
+
+export use ~/dotfiles/nushell/overlay/append_path.nu overlay_append_path
+const append_path = [
+]
+$env.Path = ($env.Path | split row (char esep) | prepend $overlay_append_path)
+$env.Path = ($env.Path | split row (char esep) | prepend $append_path)
