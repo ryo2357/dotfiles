@@ -1,3 +1,5 @@
+export use ~/dotfiles/nushell/dev/my_koyeb_app.nu *
+
 export-env { 
   # overlayで上書きする
   $env.dev_apikey = "___"
@@ -5,8 +7,4 @@ export-env {
     
 }
 
-export def devapi [] {
-  let auth = "Authorization: " + $env.dev_apikey
-  let url = $env.dev_url + "/health"
-  curl -H $auth $url -i
-}
+
