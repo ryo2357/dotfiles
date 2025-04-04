@@ -1,4 +1,9 @@
 /nushell/custom_config_overlay.nu
 /.dotter/cache.toml
 
-/nushell/overlay
+
+/nushell/environment_variable/local_override.nu
+
+
+# 追跡は不要だがローカルの開発に必用な過去ファイル
+/nushell/dust
