@@ -5,10 +5,11 @@ $env.config.buffer_editor = "vi"
 $env.config.buffer_editor = ["emacsclient", "-s", "light", "-t"]
 
 # いまいち分からんがこの辺が無いと上手いこと動かない
-$env.config.shell_integration.osc2 = false
-$env.config.shell_integration.osc7 = false
-$env.config.shell_integration.osc8 = false
-$env.config.shell_integration.osc9_9 = false
-$env.config.shell_integration.osc133 = false
-$env.config.shell_integration.osc633 = false
+# 家のパソコンではこの部分があるとエラーが発生する
+# $env.config.shell_integration.osc2 = false
+# $env.config.shell_integration.osc7 = false
+# $env.config.shell_integration.osc8 = false
+# $env.config.shell_integration.osc9_9 = false
+# $env.config.shell_integration.osc133 = false
+# $env.config.shell_integration.osc633 = false
 # $env.config.render_right_prompt_on_last_line = true
