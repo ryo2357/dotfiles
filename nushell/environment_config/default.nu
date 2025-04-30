@@ -5,7 +5,7 @@ $env.config.buffer_editor = "vi"
 $env.config.buffer_editor = ["emacsclient", "-s", "light", "-t"]
 
 # いまいち分からんがこの辺が無いと上手いこと動かない
-# 家のパソコンではこの部分があるとエラーが発生する
+# nushellのバージョンによっては必用だったりする ⇒ overlayに設定
 # $env.config.shell_integration.osc2 = false
 # $env.config.shell_integration.osc7 = false
 # $env.config.shell_integration.osc8 = false

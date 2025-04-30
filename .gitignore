@@ -3,7 +3,7 @@
 
 
 /nushell/environment_variable/local_override.nu
-
+/nushell/environment_config/local_override.nu
 
 # 追跡は不要だがローカルの開発に必用な過去ファイル
 /nushell/dust
