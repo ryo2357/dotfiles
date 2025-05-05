@@ -1,4 +1,4 @@
-def git_sync [path:string] {
+export def git_sync [path:string] {
   cd $path
   let status = (git status --porcelain)
   if $status != "" {
@@ -16,7 +16,7 @@ def git_sync [path:string] {
   git push origin main
 }
 
-def git_force_pull [path:string] {
+export def git_force_pull [path:string] {
   cd $path
   git reset --hard HEAD
   git stash

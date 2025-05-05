@@ -1,6 +1,6 @@
 # カスタム命令のロード
 
-use ~/dotfiles/nushell/custom_commands/mod.nu *
+source ~/dotfiles/nushell/custom_commands/mod.nu
 
 # 環境変数のロード
 source ~/dotfiles/nushell/environment_variable/mod.nu
@@ -12,4 +12,3 @@ source ~/dotfiles/nushell/environment_config/mod.nu
 
 # curlの指定
 alias curl = C:/tools/curl/curl-8.7.1_6-win64-mingw/bin/curl.exe
-

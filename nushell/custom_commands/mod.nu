@@ -1,2 +1,3 @@
-export use git_commands.nu *
-export use dev_my_koyeb_app.nu *
+# export use git_commands.nu *
+# export use dev_my_koyeb_app.nu *
+source ./ffmpeg_command.nu 
