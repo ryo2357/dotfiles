@@ -17,6 +17,8 @@ let abbreviations = {
     remote : `ssh $env.remote_host -t 'cd ($env.remote_dev_path | path expand); bash --login'`
     rcode : `code --remote=$env.remote_host ($env.remote_dev_path | path expand)`
 
+    # GitHub関係
+    sdg : `set-dot-github`
 }
 
 # 現状モジュール化は不要

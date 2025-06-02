@@ -1,33 +1,32 @@
-# dotfiles
+# dotfiles (dotter 管理)
 
-ryo2357's dotfiles.
+このリポジトリは [dotter](https://github.com/SuperCuber/dotter) で管理されている Windows 向けの dotfiles です。  
+デフォルトシェルは [nushell](https://www.nushell.sh/) を想定しています。
 
-## Prerequisites
+## フォルダ構成
 
-- dotter
-  `cargo install dotter`
-  [SuperCuber/dotter: A dotfile manager and templater written in rust 🦀](https://github.com/SuperCuber/dotter)
-- gsudo
-  `winget install gerardog.gsudo`
-  [How to Install | gsudo Documentation](https://gerardog.github.io/gsudo/docs/install)
-- nushell
-  `winget install nushell`
-- alacritty
-  `cargo install alacritty`
-- wezterm
-  `winget install wez.wezterm`
-- starship
-  `winget install Starship.Starship`
+- `nushell/`  
+  nushell の設定ファイル群（config.nu など）
 
-```shell
-git clone https://github.com/ryo2357/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-sudo dotter deploy --force
-```
+- `powershell/`  
+  PowerShell 用のプロファイルや設定ファイル
 
-## Usage
+- `git/`  
+  git の設定ファイル（.gitconfig など）
 
-```shell
-# Reflect the updates of dotter
-sudo dotter deploy
-```
+- `windows/`  
+  Windows 固有の設定やスクリプト
+
+- `bin/`  
+  補助的なスクリプトや実行ファイル
+
+## セットアップ手順
+
+1. [dotter](https://github.com/SuperCuber/dotter) をインストール
+2. このリポジトリをクローン
+3. `dotter deploy` を実行
+
+## 注意
+
+- Windows 環境を前提としています。
+- デフォルトシェルは nushell です。他のシェルを使う場合は適宜設定を変更してください。
