@@ -52,8 +52,8 @@ mods = "Control"
 [selection]
 save_to_clipboard = true
 
-[shell]
-program = "C:\\Program Files\\nu\\bin\\nu.exe"
+[terminal.shell]
+program = "C:\\Users\\user\\.cargo\\bin\\nu.exe"
 
 [window]
 opacity = 0.95
