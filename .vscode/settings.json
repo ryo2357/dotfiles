@@ -1,0 +1,7 @@
+{
+  "chat.promptFilesLocations": {
+    "dotgithub/prompts/ask": true,
+    "dotgithub/prompts/edit": true,
+    "dotgithub/primpts/agent": true
+  },
+}
