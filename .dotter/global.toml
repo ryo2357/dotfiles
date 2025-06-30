@@ -14,6 +14,9 @@ depends = []
 
 "starship/starship.toml" = { target = "~/.config/starship.toml", type = "symbolic" }
 
+
+"mise/config.toml" = { target = "~/.config/mise/config.toml", type = "symbolic" }
+
 # 環境の一致が難しいので参考として保存しておく
 # "WindowsTerminal/settings.json" = { target = "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json", type = "symbolic" }
 # "WindowsTerminal/state.json" = { target = "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/state.json", type = "symbolic" }

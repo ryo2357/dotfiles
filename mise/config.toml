@@ -1,0 +1,12 @@
+
+
+[tasks.random-member]
+description = "メンバーをランダムに選ぶ"
+run = "shuf -n 1 -e Alice Bob Charlie Dave"
+
+[tasks.random-member2]
+description = "メンバーをランダムに選ぶ2"
+run = "shuf -n 1 -e Alice Bob "
+
+[tools]
+node = "24"
